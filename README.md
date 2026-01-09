@@ -1,70 +1,44 @@
-# Task 2: FinAI ChatBot
+# BCGx Financial Analysis & AI ChatBot Project
 
-This project implements a simple, rule-based AI chatbot designed to provide financial insights for major technology companies (Microsoft, Tesla, Apple) based on data analyzed in **Task 1**. The chatbot interacts with users via a command-line interface to answer specific queries regarding financial metrics and growth rates.
+Welcome to the BCGx Data Science and AI Engineering Virtual Experience project. This repository contains the solution for the Financial Data Extraction and Analysis project, split into two main tasks. The project focuses on analyzing financial data for major tech companies (Microsoft, Tesla, Apple) and interacting with that data using a rule-based AI chatbot.
 
-## Project Overview
+## Project Structure
 
-The **FinAI ChatBot** acts as a bridge between the user and the processed financial data (`Final_report.csv` and `Summarized_report.csv`). It allows users to quickly retrieve key figures like Total Revenue, Net Income, and Year-over-Year growth rates without manually searching through datasets.
+The project is organized into two main directories, each corresponding to a specific task:
 
-**Key Features:**
-- **Interactive CLI**: Simple text-based interface.
-- **Company Specific**: specialized support for Microsoft, Tesla, and Apple.
-- **Fiscal Year Filtering**: specific data retrieval for years 2022-2025.
-- **Rule-Based Logic**: Answers a predefined set of financial questions accurately.
+### [Task 1: Data Extraction and Analysis](./Task%201%20-%20Data%20Extraction%20and%20analysis)
+This task focuses on the foundational work of processing financial data.
+-   **Goal**: Extract, clean, and analyze financial data from the SEC EDGAR database.
+-   **Key Activities**:
+    -   Loading raw financial data.
+    -   Data cleaning and imputation of missing values.
+    -   Calculating Year-Over-Year (YoY) growth rates for Revenue, Net Income, Assets, Liabilities, and Cash Flow.
+    -   Generating summary reports for further usage.
+-   **Main File**: `Task1.ipynb and Task2.ipynb`
 
-## Data Sources
+### [Task 2: FinAI ChatBot](./Task%202%20-%20FinAI%20ChatBot)
+This task builds upon the analyzed data to create an interactive tool.
+-   **Goal**: Develop a rule-based AI chatbot to answer financial queries.
+-   **Key Activities**:
+    -   Using the `Final_report.csv` and `Summarized_report.csv` generated in Task 1.
+    -   Implementing a command-line interface (CLI) for user interaction.
+    -   Providing specific answers to queries about Revenue, Net Income, and Growth metrics for specific fiscal years.
+-   **Main File**: `FinAI-chatbot.py`
 
-The chatbot relies on two CSV files generated from the previous data extraction and analysis task:
-1.  **`Final_report.csv`**: Contains yearly financial data for each company.
-2.  **`Summarized_report.csv`**: Contains aggregated average growth rates over the analyzed period.
+## Getting Started
 
-## Supported Queries
+To explore this project:
 
-The chatbot can answer the following questions. Please ensure you type them exactly as shown (or copy-paste) when prompted:
+1.  **Clone the repository**.
+2.  **Start with Task 1**: Navigate to the `Task 1 - Data Extraction and analysis` folder to review the data analysis process in the Jupyter Notebook.
+3.  **Proceed to Task 2**: Navigate to the `Task 2 - FinAI ChatBot` folder to run the chatbot and interact with the processed data.
 
-**Metric-Specific Queries (Requires Fiscal Year):**
-- What is the total revenue?
-- What is the Net Income?
-- What is the sum of total assets?
-- What is the sum of total liabilities?
-- What is cash flow from operating activities?
-- What is the revenue growth(%) ?
-- What is the net income growth(%) ?
-- What is the assets growth(%) ?
-- What is the liabilities growth(%) ?
-- What is the cash flow from operations growth(%) ?
+For detailed instructions on how to run each part, please refer to the `README.md` files located within each task's directory.
 
-**Summary Queries (Average Metrics):**
-- What is the year by year average revenue growth rate(%)?
-- What is the year by year average net income growth rate(%)?
-- What is the year by year average assets growth rate(%)?
-- What is the year by year average liabilities growth rate(%)?
-- What is the year by year average cash flow from operations growth rate(%)?
+## Technologies Used
+-   **Python**: Core programming language.
+-   **Pandas**: For data manipulation and analysis.
+-   **Jupyter Notebook**: For interactive coding and documentation.
 
-## Prerequisites
-
-- Python 3.x
-- Pandas library
-
-## Setup and Usage
-
-1.  **Navigate to the project directory**: `Task 2 - FinAI ChatBot`.
-2.  **Ensure Data Files are Present**: Make sure `Final_report.csv` and `Summarized_report.csv` are in the same directory as the script.
-3.  **Run the Chatbot**:
-    ```bash
-    python FinAI-chatbot.py
-    ```
-4.  **Interact**:
-    - Type **`Hi`** to start the session.
-    - Enter the **Company Name** (e.g., Microsoft).
-    - Enter the **Fiscal Year** (e.g., 2023).
-    - **Enter your query** from the list of supported questions above.
-    - Type **`exit`** when asked to start a new session if you wish to quit.
-
-## Files in Directory
-
-- **`FinAI-chatbot.py`**: The main Python script containing the chatbot logic.
-- **`Task2.ipynb`**: A Jupyter Notebook used for development and testing of the chatbot logic.
-- **`questions.txt`**: A text file listing all valid questions the chatbot understands. 
-- **`Final_report.csv`**: Financial dataset (Input).
-- **`Summarized_report.csv`**: Summary dataset (Input).
+---
+*This project is part of a virtual experience program simulating real-world financial data science tasks.*
